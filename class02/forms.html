@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Forms</title>
+  </head>
+
+  <body>
+    <form action="url.php">
+
+      <fieldset>
+        <label>Input de texto</label>
+        <input type="text" placeholder="Nombre">
+        <!-- Recuerda mencionar sobre 'placeholder', 'value', disabled', 'required' y 'hidden' -->
+      </fieldset>
+
+      <fieldset>
+        <label>Input de email</label>
+        <input type="email" placeholder="Ingrese su email">
+      </fieldset>
+
+      <fieldset>
+        <label>Input de password</label>
+        <input type="password">
+      </fieldset>
+
+      <fieldset>
+        <label>Input de fecha</label>
+        <input type="date">
+      </fieldset>
+
+      <fieldset>
+        <label>Input de número</label>
+        <input type="number">
+      </fieldset>
+
+      <fieldset>
+        <label>Textarea</label>
+        <textarea placeholder="Ingrese aquí su texto" rows="6"></textarea>
+        <!-- Aquí recuerda hablar sobre 'rows' -->
+      </fieldset>
+
+      <fieldset>
+        <label>Checkbox</label>
+        <input type="checkbox">Robots
+        <input type="checkbox">Piratas
+        <input type="checkbox" checked disabled>Animales
+        <!-- Recuerda mencionar los 'checked' -->
+      </fieldset>
+
+      <fieldset>
+        <label>Radio Buttons</label>
+        <input name="category" type="radio">Robots
+        <input name="category" type="radio">Piratas
+        <input name="category" type="radio" checked>Animales
+      </fieldset>
+
+      <fieldset>
+        <label>Escoja su categoría favorita</label>
+        <select>
+          <option value="robots">Robots</option>
+          <option value="piratas">Piratas</option>
+          <optgroup label="Animales">
+            <option>Perro</option>
+            <option>Gato</option>
+            <option>Canario</option>
+          </optgroup>
+        </select>
+      </fieldset>
+
+      <input type="submit" value="Enviar datos">
+
+      <button>Button</button>
+
+    </form>
+  </body>
+
+</html>
