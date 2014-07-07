@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box; /* Para Chrome, IE8+, Opera y Safari */
+  -moz-box-sizing: border-box; /* Para Firefox. */
+  -webkit-box-sizing: border-box; /* Para antiguos iOS4 y Android 3  */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  padding: 20px;
+}
+
+#newsblock {
+  background-color: #ccc;
+  display: block; /* Aquí se convierte al link en un elemento de bloque, a fin de poder modificar su altura. */
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+#newsblock h3 {
+  background-color: rgba(0,0,0,0.5);
+  border-top: 2px solid rgba(0,0,0,0.1);
+  color: #fff;
+  padding: 10px;
+  padding-top: 20px;
+  /* El "padding: 10px" define esa medida en los 4 lados de la caja, y luego el "padding-top: 20px" cambia el valor SOLO para la parte superior de la misma. También se podría haber usado "padding: 20px 10px 10px 10px". */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* El width es necesario porque al usar "position: absolute;" el elemento queda fuera del flujo, y su ancho se basa en su propio contenido. Con el 100% le indicamos que se extienda al máximo posible (dentro de su padre). */
+}
+
+#newsblock h3 span {
+  position: absolute;
+  top: -12px;
+  background-color: #e62f1a;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  /* Este span está posicionado de modo absoluto EN BASE al h3. Es decir, las coordenadas de top, right, bottom o left se basan en su padre. De este modo, con un top negativo, se puede elevar respecto al texto del h3. */
+}
+
+#newsblock:hover h3 {
+  background-color: rgba(0,0,0,0.8);
+}
+
+#newsblock:hover .tag {
+  background-color: black;
+}
+
+/* Notar el ":hover" después del nombre de ID. En este último caso, se apunta al span que está dentro del #newsblock MIENTRAS está en hover. Es decir, el span cambiará su background-color a negro MIENTRAS que el cursor esté pasando sobre el elemento #newsblock. */
+
+.tag {
+  background-color: #009bff;
+  color: #fff;
+  font-size: 13px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 4px;
+  right: 0;
+}
+

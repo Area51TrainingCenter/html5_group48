@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box; /* Para Chrome, IE8+, Opera y Safari */
+  -moz-box-sizing: border-box; /* Para Firefox. */
+  -webkit-box-sizing: border-box; /* Para antiguos iOS4 y Android 3  */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  padding: 20px;
+}
+
+header,
+section,
+div,
+footer {
+  background-color: #bada55;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: static;
+  /* El "position: static" es el comportamiento regular de todo elemento en CSS. */
+}
+
+div {
+  position: relative;
+  left: 40px;
+  /* Los elementos en "position: relative" son como "static", pero pueden moverse con coordenadas (top, right, bottom, left). Cuando se mueven, sin embargo, dejan el vacío donde "debieron haber estado". Esto es porque siguen siendo parte del flujo. */
+}

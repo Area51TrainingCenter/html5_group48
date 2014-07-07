@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box; /* Para Chrome, IE8+, Opera y Safari */
+  -moz-box-sizing: border-box; /* Para Firefox. */
+  -webkit-box-sizing: border-box; /* Para antiguos iOS4 y Android 3  */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  position: relative;
+}
+
+div {
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  /* El "position: fixed" fija el objeto (con top, right, bottom, left) a su padre no-static (relative, absolute o fixed). En este caso, al body ("position: relative"). */
+}
+
+a {
+  color: #009bff;
+}
+
+blockquote {
+  margin: 100px auto;
+  width: 700px;
+}
+
+blockquote img {
+  display: block;
+  margin: 0 auto 40px;
+}
+
+blockquote p {
+  margin-bottom: 20px;
+}

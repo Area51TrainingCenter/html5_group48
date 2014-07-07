@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box; /* Para Chrome, IE8+, Opera y Safari */
+  -moz-box-sizing: border-box; /* Para Firefox. */
+  -webkit-box-sizing: border-box; /* Para antiguos iOS4 y Android 3  */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  padding: 20px;
+}
+
+header,
+section,
+div,
+footer {
+  background-color: #bada55;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: static;
+  /* El "position: static" es el comportamiento regular de todo elemento en CSS. */
+}
+
+div {
+    background-color: red;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    /* El "position: absolute" sale del flujo, y se posiciona según su parent (padre) SIEMPRE Y CUANDO tenga un position no-static (relative, absolute o fixed). En este caso, dado que body (su parent) tiene un "position: static", el div NO se posiciona en base a él, sino a una instancia incluso superior, el viewport. */
+}
