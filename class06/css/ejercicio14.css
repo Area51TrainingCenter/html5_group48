@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box; /* Para Chrome, IE8+, Opera y Safari */
+  -moz-box-sizing: border-box; /* Para Firefox. */
+  -webkit-box-sizing: border-box; /* Para antiguos iOS4 y Android 3  */
+}
+
+/* clearfix */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+  background-color: #eee;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  padding: 20px;
+}
+
+.player-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 500px;
+  height: 228px;
+  padding: 14px 14px 14px 176px;
+  position: relative;
+}
+
+.player-card .player-image {
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.player-card a {
+  color: #0087e6;
+  text-decoration: none;
+}
+
+.player-card a:hover {
+  text-decoration: underline;
+}
+
+.player-card h1 {
+  margin-bottom: 10px;
+}
+
+.player-card h1 span {
+  text-transform: uppercase;
+}
+
+.player-card h2 {
+  position: relative;
+  display: block;
+  height: 22px;
+  line-height: 22px;
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+.player-card h2 img {
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+}
+
+.player-card .shots,
+.player-card .goals {
+  cursor: default;
+  float: left;
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #666;
+}
+
+.player-card .shots:hover,
+.player-card .goals:hover {
+  color: #222;
+}
+
+.player-card .shots h3,
+.player-card .goals h3 {
+  font-size: 60px;
+  line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
