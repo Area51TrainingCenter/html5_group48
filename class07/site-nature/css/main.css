@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box; /* Para Chrome, IE8+, Opera y Safari */
+  -moz-box-sizing: border-box; /* Para Firefox. */
+  -webkit-box-sizing: border-box; /* Para antiguos iOS4 y Android 3  */
+}
+
+/* clearfix */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+
+
+
+body {
+  background-color: #f8f8f8;
+  color: #444;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.wrapper {
+  border: 1px dashed #000; /* Borde TEMPORAL solo con fines visuales */
+  margin: 0 auto;
+  width: 1172px;
+  position: relative;
+}
+
+.nav-main li {
+  float: left;
+  margin-right: 20px;
+}
+
+.nav-main li a {
+  color: #444;
+  display: block;
+  /* Necesita el display: block; para comportarse como un bloque y no como un elemento inline. Esto permite utilizar paddings verticales. */
+  font-size: 16px;
+  padding: 40px 10px;
+  text-decoration: none;
+}
+
+.nav-main li a:hover,
+.nav-main li a:focus,
+.nav-main li a.active {
+  border-bottom: 5px solid #444;
+  color: #ff6600;
+}
+

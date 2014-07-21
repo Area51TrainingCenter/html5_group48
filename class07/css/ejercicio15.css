@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box; /* Para Chrome, IE8+, Opera y Safari */
+  -moz-box-sizing: border-box; /* Para Firefox. */
+  -webkit-box-sizing: border-box; /* Para antiguos iOS4 y Android 3  */
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  border: 1px dashed #000;
+  /* Borde solo para notar cuál es la verdadera área del contenedor" */
+  width: 960px;
+  margin: 0 auto;
+}
+
+section {
+  background: url("../images/imac.jpg") no-repeat 120% center;
+  padding: 180px 0;
+}
+
+.imac-intro {
+  width: 360px;
+}
+
+.imac-intro h1 {
+  font-family: serif;
+  font-size: 110px;
+  margin-bottom: 40px;
+}
+
+.imac-intro h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.imac-intro p {
+  color: #aaa;
+  margin-bottom: 10px;
+}
