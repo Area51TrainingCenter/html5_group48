@@ -12,13 +12,21 @@
             var num2 = parseInt(prompt("Ingrese numero 2"));
             var resultado = 0;
 
-            if(operador == "+"){
+            if (operador == "+") {
                 resultado = (num1 + num2);
-            }else{
-                
+            }
+            else if (operador == "-") {
+                resultado = (num1 - num2);
+            }
+            else if (operador == "*") {
+                resultado = (num1 * num2);
+            }
+            else if (operador == "/") {
+                resultado = (num1 / num2);
+            }
+            else {
                 alert("no cumple con la condicion");
-                
-            }         
+            }
 
             console.log(resultado);
 
