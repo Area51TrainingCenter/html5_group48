@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            *{
+                font-size:50px;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            var limite = 9;
+            document.write('<table border="1">');
+            for (var i = 1; i <= limite; i++) {
+                if (i == 1 || i == 4 || i == 7) {
+                    document.write('<tr>');
+                }
+                document.write('<td>');
+                document.write('<table border="1">');
+                for (var x = 1; x <= limite; x++) {
+                    if (x == 1 || x == 4 || x == 7) {
+                        document.write('<tr>');
+                    }
+                    //imprimiento la segunda tabla                  
+                    document.write('<td>' + x + '</td>');
+
+                    if (x == 3 || x == 6 || x == 9) {
+                        document.write('</tr>');
+                    }
+                }
+                document.write('</table>');
+                document.write('</td>');
+                if (i == 3 || i == 6 || i == 9) {
+                    document.write('</tr>');
+                }
+
+            }
+
+            document.write('</table>');
+        </script>
+
+
+    </body>
+</html>

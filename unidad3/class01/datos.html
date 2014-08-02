@@ -7,7 +7,6 @@
     <body>
 
         <script type="text/javascript">
-
             var lista = [
                 ["Antonio", "Cucho", "23", "Periodista"],
                 ["Antonio", "Cucho", "23", "Informatico"],
@@ -17,24 +16,20 @@
                 ["Antonio", "Cucho", "23", "Trol"],
             ];
 
-            document.write('<table border="1">');
-
+            document.write('<table>');
             for (var i = 0; i < lista.length; i++) {
-
-                document.write("<tr>");
-
-                for (var x = 0; x < lista[i].length; x++) {
-                    
-                    document.write("<td>" + lista[i][x] + "</td>");
-                    
+                if (i % 2 == 0) {
+                    document.write('<tr style="background:#FFFDDD">');
+                } else {
+                    document.write('<tr>');
                 }
 
+                for (var x = 0; x < lista[i].length; x++) {
+                    document.write("<td>" + lista[i][x] + "</td>");
+                }
                 document.write("</tr>");
-
             }
-            
             document.write("</table>");
-            
         </script>
 
     </body>
