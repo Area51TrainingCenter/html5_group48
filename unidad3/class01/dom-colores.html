@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style type="text/css">
             span{
-                
+
                 display: block;
                 width: 50px;
                 height: 50px;
@@ -13,19 +13,19 @@
         </style>
     </head>
     <body>
+
+        <div id="colores"></div>
+
         <script type="text/javascript">
 
             var color;
             var limite = 20;
-
+            var colores = document.getElementById("colores");
             for (var i = 1; i <= limite; i++) {
-                
+                var cuadrito = document.createElement("span");
                 color = "#" + Math.floor((Math.random() * 1000000) + 1);
-                
-                
-                document.write('<span style="background:' 
-                        + color +
-                        '"></span>');
+                cuadrito.style.backgroundColor = color;
+                colores.appendChild(cuadrito);
             }
 
 
