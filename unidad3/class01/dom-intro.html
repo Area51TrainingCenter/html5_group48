@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+       
+        <div id="bienvenida">Bienvenidos a Javascript</div>
+        
+        <script type="text/javascript">
+            
+            var mensaje = document.getElementById("bienvenida");
+
+            var titulo = document.createElement("h1");
+            
+            titulo.innerHTML = "Saludos en DOM";
+            
+            mensaje.appendChild(titulo);
+            
+            var subtitulo = document.createElement("h2");
+            subtitulo.innerHTML = "subtitulo en DOM";
+            
+            titulo.appendChild(subtitulo);
+                        
+            console.log(titulo);
+
+            
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div id="lista-datos"></div>
+
+        <script type="text/javascript">
+
+            var datos = [
+                {"nombre": "Antonio", "edad": 23},
+                {"nombre": "Antonio", "edad": 23},
+                {"nombre": "Antonio", "edad": 23},
+                {"nombre": "Antonio", "edad": 23},
+                {"nombre": "Antonio", "edad": 23},
+                {"nombre": "Antonio", "edad": 23},
+            ];
+
+            var lista = document.getElementById("lista-datos");
+
+            for (var i = 0; i < datos.length; i++) {
+
+                var dato = datos[i];
+
+                //Creando un nuevo elemento : DIV
+                var item = document.createElement("div");
+                item.className = "item-lista";
+
+                //Creando un nuevo elemento : H3
+                var nombre = document.createElement("h3");
+                nombre.innerHTML = "Nombre: " + dato.nombre;
+                nombre.className = "nombre-item-lista";
+
+                //Creando un nuevo elemento : H4
+                var edad = document.createElement("h4");
+                edad.innerHTML = "Edad: " + dato.edad;
+                edad.className = "edad-item-lista";
+
+                //Añadiendo nombre y edad
+                item.appendChild(nombre);
+                item.appendChild(edad);
+
+                //Añadiendo a la lista padre
+                lista.appendChild(item);
+
+            }
+            console.log(lista.childNodes[0]);
+        </script>
+    </body>
+</html>
