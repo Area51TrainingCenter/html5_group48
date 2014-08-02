@@ -3,29 +3,29 @@
     <head>
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <style type="text/css">
-            span{
-                
-                display: block;
-                width: 50px;
-                height: 50px;
-            }
-        </style>
     </head>
     <body>
         <script type="text/javascript">
 
-            var color;
-            var limite = 20;
+            var filas = 100;
 
-            for (var i = 1; i <= limite; i++) {
-                color = "#" + Math.floor((Math.random() * 1000000) + 1);
-                document.write('<span style="background:' 
-                        + color +
-                        '"></span>');
+            var columnas = 3;
+
+            document.write("<table>");
+
+            for (var i = 1; i <= filas; i++) {
+
+                document.write("<tr>");
+
+                document.write("<td>" + i + "</td>");
+
+                document.write('<td><input type="text" /></td>');
+
+                document.write('<td><input type="button" /></td>');
+
+                document.write("</tr>");
             }
-
-
+            document.write("</table>");
         </script>
     </body>
 </html>
