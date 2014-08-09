@@ -23,7 +23,7 @@
         <![endif]-->
     </head>
 
-    <body>
+    <body onload="init()">
 
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -51,7 +51,10 @@
             <!-- Example row of columns -->
             <div class="row">
                 <div class="col-md-12">
-                    <form class="navbar-form" role="form">
+                    <form class="navbar-form" role="form" id="form-register">
+                        <div class="form-group">
+                            <input type="text" id="txtdni" placeholder="DNI" class="form-control">
+                        </div>
                         <div class="form-group">
                             <input type="text" id="txtnombres" placeholder="Nombres" class="form-control">
                         </div>
@@ -61,13 +64,13 @@
                         <div class="form-group">
                             <input type="text" id="txtcelular" placeholder="Celular" class="form-control">
                         </div>
-                        <button type="submit" class="btn btn-success">Agregar</button>
+                        <button type="button" class="btn btn-success" onclick="add()">Agregar</button>
                     </form>
                 </div>
                 <div class="col-md-4">
-                    <h2>Nombres: Antonio Cucho</h2>
-                    <p>Email: antoniocuga@gmail.com</p>
-                    <p>Celular:979467802</p>
+                    <h2>Antonio Cucho</h2>
+                    <p>antoniocuga@gmail.com</p>
+                    <p>979467802</p>
                     <p><a class="btn btn-default" href="#" role="button">Agregar a mis amigos</a></p>
                 </div>               
             </div>
@@ -83,7 +86,8 @@
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
