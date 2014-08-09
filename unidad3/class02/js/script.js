@@ -70,16 +70,27 @@ function generateUsuario(dni) {
 
     var celular = document.createElement("p");
     celular.innerHTML = data.txtcelular;
-    
-    
-    /*<p><a class="btn btn-default" href="#" role="button">Agregar a mis amigos</a></p>*/
 
+    var button = document.createElement("a");
+    button.className = "btn btn-default";
+    button.innerHTML = "Agregar a mis amigos";
+ 
     item.appendChild(nombre);
     item.appendChild(email);
     item.appendChild(celular);
-
+    item.appendChild(button);
     container.appendChild(item);
 
-    console.log(container);
+    button.addEventListener('click', function() {
+        addFriend(dni);
+    });
+}
 
+function addFriend(dni) {
+
+    var data = datos[dni];
+    
+    console.log(data);
+
+    confirm("¿Desea agregar a " + data.txtnombres + " tus amigos?");
 }
