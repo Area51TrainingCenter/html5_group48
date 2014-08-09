@@ -108,6 +108,11 @@ function listFriends() {
     for (var i = 0; i < friends.length; i++) {
 
         var item = document.createElement("li");
+
+        item.addEventListener('click', function() {
+            removeFriend(dni, item);
+        });
+
         data = datos[friends[i]];
 
         item.innerHTML = data.txtnombres;
@@ -118,4 +123,16 @@ function listFriends() {
     listcontainer[0].appendChild(lista);
 
     listcontainer[0].className = "list-friends-visible";
+}
+
+function removeFriend(dni, item) {
+
+    var data = datos[dni];
+
+    var confirmacion = confirm("¿Desea eliminar a " + data.txtnombres + " de tu lista de amigos?");
+
+    if (confirmacion) {
+        friends.splice(dni);
+        item.parentNode.removeChild(item);
+    }
 }
