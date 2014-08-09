@@ -1,5 +1,7 @@
 var datos = [];
 
+var friends = [];
+
 function init() {
 
 //    alert("Clase de eventos");
@@ -74,7 +76,7 @@ function generateUsuario(dni) {
     var button = document.createElement("a");
     button.className = "btn btn-default";
     button.innerHTML = "Agregar a mis amigos";
- 
+
     item.appendChild(nombre);
     item.appendChild(email);
     item.appendChild(celular);
@@ -89,8 +91,31 @@ function generateUsuario(dni) {
 function addFriend(dni) {
 
     var data = datos[dni];
-    
-    console.log(data);
 
-    confirm("¿Desea agregar a " + data.txtnombres + " tus amigos?");
+    var confirmacion = confirm("¿Desea agregar a " + data.txtnombres + " tus amigos?");
+
+    if (confirmacion) {
+        friends.push(dni);
+    }
+}
+
+function listFriends() {
+
+    var listcontainer = document.getElementsByClassName("list-friends");
+
+    var lista = document.createElement("ul");
+
+    for (var i = 0; i < friends.length; i++) {
+
+        var item = document.createElement("li");
+        data = datos[friends[i]];
+
+        item.innerHTML = data.txtnombres;
+
+        lista.appendChild(item);
+    }
+
+    listcontainer[0].appendChild(lista);
+
+    listcontainer[0].className = "list-friends-visible";
 }

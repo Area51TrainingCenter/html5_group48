@@ -3,3 +3,28 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+
+.list-friends{
+    display: none;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 999;
+    width: 500px;
+    padding: 20px;
+    height: 500px;
+    background: #4cae4c;
+    top: 25px;    
+}
+
+.list-friends-visible{
+    display: visible;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 999;
+    width: 500px;
+    padding: 20px;
+    height: 500px;
+    background: #4cae4c;
+    top: 25px;    
+}
