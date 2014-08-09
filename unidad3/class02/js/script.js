@@ -6,9 +6,9 @@ function init() {
 
 }
 
-function register(usuario) {
+function register(dni, usuario) {
 
-    datos[usuario.txtdni] = usuario;
+    datos[dni] = usuario;
 }
 
 function add() {
@@ -22,14 +22,21 @@ function add() {
     var usuario = {};
 
     for (var i = 0; i < (childrens).length; i++) {
-
-        console.log(childrens[i][0].id);
-        //usuario[childrens]
-
+        //alert(childrens[i].children.length);
+        if (childrens[i].children.length > 0) {
+            var element = childrens[i].children[0];
+            if (element.type == "text") {
+                usuario[element.id] = element.value;
+            }
+        }
     }
 
+    dni = usuario.txtdni;
+    register(dni, usuario);
 
+}
 
-
-
+function generateUsuario(){
+    
+    
 }
