@@ -1,5 +1,7 @@
 $().ready(function() {
 
+    $("#tabs").tabs();
+
     var posts = [];
     var id = 1;
 
@@ -7,7 +9,9 @@ $().ready(function() {
 
         var message = $('#comment').val();
 
-        var commentList = $('#post-list');
+        var categoria = $('#categoria').val();
+
+        var commentList = $('#' + categoria);
 
         var itemComment = document.createElement("div");
 
@@ -88,6 +92,13 @@ $().ready(function() {
     $('#registrarse').click(function() {
 
         $("#registro").dialog();
+
+    });
+
+
+    $('#comentar').click(function() {
+
+        $("#post-comments").dialog();
 
     });
 

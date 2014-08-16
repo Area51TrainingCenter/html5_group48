@@ -17,6 +17,7 @@
 
             #post-comments{
                 width: 100%;
+                display: none;
 
             }
 
@@ -49,13 +50,22 @@
                 display: none;
             }
 
+            .item-menu{
+                border: 1px solid #93c3cd;
+                background: #93c3cd url("images/ui-bg_diagonals-small_50_93c3cd_40x40.png") 50% 50% repeat;
+                font-weight: bold;
+                color: #333;
+            }
+
+
 
         </style>
 
     </head>
     <body>
 
-        <a id="registrarse" href="#">Registrate!!</a>
+        <a id="registrarse" class="item-menu" href="#">Registrate!!</a>
+        <a id="comentar" class="item-menu" href="#">Comentar!!</a>
         <div id="registro">
             <form>
                 <input type="text" placeholder="nombres"/>
@@ -67,10 +77,29 @@
             <div id="post-comments">
                 <form>
                     <textarea id="comment"></textarea>
+                    <select id="categoria">
+                        <option value="ocio">Ocio</option>
+                        <option value="noticias">Noticias</option>
+                        <option value="tecnologia">Tecnologia</option>
+                    </select>
                     <input type="button" id="send-post" value="publicar" />
                 </form>
             </div>
             <div id="post-list">
+            </div>
+        </div>
+
+        <div id="tabs">
+            <ul>
+                <li><a href="#ocio">Ocio</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+            </ul>
+            <div id="ocio">
+            </div>
+            <div id="noticias">
+            </div>
+            <div id="tecnologia">
             </div>
         </div>
 
