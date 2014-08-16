@@ -4,8 +4,9 @@
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
-
+        <link href="jquery-ui.min.css" rel="stylesheet">
         <style>
 
             #page{
@@ -27,14 +28,14 @@
             #post-list{
                 padding: 10px;
             }
-            
+
             .item-comment{
                 padding: 5px;
                 margin-bottom: 10px;
                 border-bottom: dashed black 1px;
                 overflow: hidden;
             }
-            
+
             .item-comment a{
                 float:right;
                 display: block;
@@ -43,12 +44,24 @@
                 text-decoration: none;
                 color: #3b5998;
             }
-            
+
+            #registro{
+                display: none;
+            }
+
 
         </style>
 
     </head>
     <body>
+
+        <a id="registrarse" href="#">Registrate!!</a>
+        <div id="registro">
+            <form>
+                <input type="text" placeholder="nombres"/>
+                <input type="email" placeholder="Email"/>
+            </form>
+        </div>
 
         <div id="page">
             <div id="post-comments">

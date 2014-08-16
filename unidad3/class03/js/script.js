@@ -51,16 +51,43 @@ $().ready(function() {
 
     });
 
-
+    // Evento de click para el boton like
     $('#post-list').on('click', '.item-comment > a.like', function(event) {
 
+        //obteniendo el valor id del comentario
         var id = $(this).attr('comment-id');
 
-        var comment = $('#comment-' + id).find('.like > span');
+        //obteniendo el valor id del comentario
+        var commentCount = $('#comment-' + id).find('.like > span');
 
-        var count = comment.html();
+        //Obtiendo cantidad de comentarios
+        var count = commentCount.html();
+
+        //parseando de texto a numero
         count = parseInt(count);
-        comment.html((count + 1));
+
+        //Agregando la cantidad de comentarios final
+        commentCount.html((count + 1));
+
+    });
+
+    // Evento de click para el boton eliminar
+    $('#post-list').on('click', '.item-comment > a.eliminar', function(event) {
+
+        if (confirm("Desea eliminar este comentario")) {
+
+            var id = $(this).attr('comment-id');
+
+            var comment = $('#comment-' + id);
+
+            $(comment).remove();
+        }
+
+    });
+
+    $('#registrarse').click(function() {
+
+        $("#registro").dialog();
 
     });
 
