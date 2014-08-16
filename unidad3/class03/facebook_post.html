@@ -46,6 +46,15 @@
                 color: #3b5998;
             }
 
+            .categoria{
+                float:right;
+                display: block;
+                padding: 2px;
+                margin: 1px;
+                text-decoration: none;
+                color: red;
+            }
+
             #registro{
                 display: none;
             }
@@ -63,12 +72,12 @@
 
     </head>
     <body>
-
+        <div id="nadaquever"></div>
         <a id="registrarse" class="item-menu" href="#">Registrate!!</a>
         <a id="comentar" class="item-menu" href="#">Comentar!!</a>
         <div id="registro">
             <form>
-                <input type="text" placeholder="nombres"/>
+                <input type="text" placeholder="nombres" id="txtnombre" />
                 <input type="email" placeholder="Email"/>
             </form>
         </div>
@@ -81,6 +90,8 @@
                         <option value="ocio">Ocio</option>
                         <option value="noticias">Noticias</option>
                         <option value="tecnologia">Tecnologia</option>
+                        <option value="nadaquever">div nada que ver</option>
+                        <option value="post-list">Natural de publicar comentarios</option>
                     </select>
                     <input type="button" id="send-post" value="publicar" />
                 </form>
@@ -89,7 +100,7 @@
             </div>
         </div>
 
-        <div id="tabs">
+        <div id="nombrequequiera">
             <ul>
                 <li><a href="#ocio">Ocio</a></li>
                 <li><a href="#noticias">Noticias</a></li>
@@ -102,6 +113,6 @@
             <div id="tecnologia">
             </div>
         </div>
-
+        <div id="soloaqui"></div>
     </body>
 </html>
