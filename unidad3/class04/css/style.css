@@ -1,0 +1,24 @@
+#slider{
+
+    width: 500px;
+    margin: 0px auto;
+    position: relative;
+
+}
+
+#slider img.image-slider{
+    width: 500px;
+    position: absolute;
+    top: 0px;
+}
+
+#thumbs-slider {
+    width: 500px;
+    margin: 0px auto;
+    margin-top: 400px;
+}
+
+#thumbs-slider img{
+    width: 100px;
+    height: 100px;
+}
