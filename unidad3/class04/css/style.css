@@ -12,6 +12,10 @@
     top: 0px;
 }
 
+#slider img.active{
+    z-index: 9999;
+}
+
 #thumbs-slider {
     width: 500px;
     margin: 0px auto;
